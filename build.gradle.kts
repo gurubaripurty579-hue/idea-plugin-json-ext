@@ -7,7 +7,7 @@ plugins {
 }
 
 group = "com.xxxlin.json.ext"
-version = "1.0.1"
+version = "1.0.2"
 
 val localProperty = Properties()
 localProperty.load(project.rootProject.file("local.properties").inputStream())
@@ -55,8 +55,10 @@ tasks {
     }
 
     patchPluginXml {
+        // 最底支持版版
         sinceBuild.set("203")
-        untilBuild.set("251.*")
+        // 最高支持版本
+        untilBuild.set("252.*")
     }
 
     signPlugin {
